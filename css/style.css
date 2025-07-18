@@ -1,0 +1,228 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fondo solo visible al inicio */
+body.fondo-inicial {
+  background-image: url('../img/fondo.jpeg'); /* Ruta a tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background 1s ease;
+}
+
+/* Fondo normal después de eliminar la clase */
+body {
+  background-color: #f0f8ff; /* Tu fondo normal después */
+}
+
+/* Encabezado */
+header{
+  background: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
+
+/* Footer adaptable: siempre abajo salvo en la primera página */
+footer {
+  background: #0077b6;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: 40px;
+  position: relative;
+  bottom: 0;
+}
+
+/* Estructura para mantener el footer abajo excepto en la primera página */
+body:not(.pagina-inicio) {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main adaptable: ocupa el espacio restante */
+body:not(.pagina-inicio) main {
+  flex: 1;
+}
+
+/* Navegación */
+.navbar {
+  background-color: #00b4d8;
+  padding: 0.5em 0;
+}
+
+/* Estilos de la barra de navegación */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Estilos de los enlaces de la barra de navegación */ 
+.navbar li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Efecto hover en los enlaces de la barra de navegación */
+.navbar li a:hover {
+  color: #000000;
+}
+
+/* Estilos del main */
+main {
+  padding: 20px;
+}
+
+/* Saludo inicial */
+#textoSaludo {
+  text-align: center;
+  margin-bottom: 100px;
+  color: #023e8a;
+  font-size: 20px;
+}
+
+/* Contenido inyectado por JS */
+.contenido-inicial {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #023e8a;
+}
+
+/* Botones */
+.botones-accion {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Estilos de los botones */
+button {
+  background-color: #00b4d8;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Efecto hover en los botones */
+button:hover {
+  background-color: #0077b6;
+}
+
+/* Carrusel */
+.carrusel img {
+  width: 400%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+/* Lista de lugares destacados */
+.lugares-destacados ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+/* Estilos de los elementos de la lista de lugares destacados */
+.lugares-destacados li {
+  background: #caf0f8;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  max-width: 300px;
+}
+
+/* Buscador de destinos */
+.buscador-destino input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Estilos del botón del buscador de destinos */
+.buscador-destino button {
+  background-color: #00b4d8;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+/* Efecto hover en el botón del buscador de destinos */
+.buscador-destino button:hover {
+  background-color: #0077b6;
+}
+/* ===== MODAL ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Contenido del modal */
+.modal-contenido {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  animation: aparecer 0.3s ease-out;
+}
+
+/* Animación de aparición del modal */
+@keyframes aparecer {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Estilos del título del modal */
+.cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Efecto hover en el botón de cerrar del modal */
+.cerrar:hover {
+  color: red;
+}
+
+
