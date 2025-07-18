@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Turismo El Salvador</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="fondo-inicial">
+  <header>
+    <h1 id="bienvenida">¡Bienvenido a Turismo en El Salvador!</h1>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="destinos.html">Destinos</a></li>
+        <li><a href="reservas.html">Reservas</a></li>
+        <li><a href="opiniones.html">Opiniones</a></li>
+        <li><a href="cultura.html">Cultura y Gastronomía</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <main>
+    <h2 id="textoSaludo">¡Descubre las maravillas de</h2>
+
+    <section id="contenido" class="contenido-inicial">
+      <p>El Salvador es un país lleno de belleza natural, cultura vibrante y una rica historia. Desde sus playas paradisíacas hasta sus montañas impresionantes, hay algo para todos los gustos.</p>
+    </section>
+
+    <!-- Botones de acción -->
+    <div class="botones-accion">
+      <button id="botonMagico">Haz clic aquí</button>
+    </div>
+
+    <!-- Buscador de destinos -->
+
+    <div class="buscador-destino" style="display: none; justify-content: center; margin-bottom: 20px; gap: 10px;">
+  <input type="text" id="inputDestino" placeholder="Buscar destino destacado...">
+  <button id="btnBuscarDestino">Buscar</button>
+</div>
+
+
+    <!-- Carrusel oculto al inicio -->
+    <section class="carrusel" style="display: none;">
+      <h2>Galería de Lugares Turísticos</h2>
+      <img id="imagenCarrusel" src="img/el tunco.jpg" alt="Lugar turístico">
+      
+    </section>
+
+    <!-- Destacados ocultos al inicio -->
+    <section class="lugares-destacados" style="display: none;">
+      <h2>Lugares Destacados</h2>
+      <ul id="listaDestacados"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Turismo El Salvador</p>
+  </footer>
+
+  <!-- Modal de Información del Destino -->
+  <div id="modalDestino" class="modal">
+    <div class="modal-contenido">
+      <span id="cerrarModal" class="cerrar">&times;</span>
+      <div id="infoDestinoModal"></div>
+    </div>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
