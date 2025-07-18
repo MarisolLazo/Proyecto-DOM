@@ -1,9 +1,17 @@
 /* Estilos solo para main de mi destinos.html*/
 .main-destinos {
+background-image: url(https://elsalvador.travel/system/wp-content/uploads/2022/12/DestinationCerroEramon.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+.seccion-destinos {
     padding: 20px;
     max-width: 1200px;
     margin: 20px auto;
-    background-color: white; 
+    background-color: rgba(255, 255, 255, 0.714); 
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
 }
@@ -100,4 +108,8 @@
     font-size: 1.1em;
     line-height: 1.6;
     color: #333;
+}
+
+footer {
+margin-top: 0;
 }
