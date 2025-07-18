@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Turismo El Salvador</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/destinos.css">
+</head>
+<body class="fondo-inicial">
+  <header>
+    <h1 id="bienvenida">¡Bienvenido a Turismo en El Salvador!</h1>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="destinos.html">Destinos</a></li>
+        <li><a href="reservas.html">Reservas</a></li>
+        <li><a href="opiniones.html">Opiniones</a></li>
+        <li><a href="cultura.html">Cultura y Gastronomía</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <main class="main-destinos">
+  <section class="seccion-destinos">
+            <h2>Nuestros Destinos Turísticos</h2>
+
+            <div class="controles-filtro">
+                <button data-filtro="todos" class="boton-filtro activo">Todos</button>
+                <button data-filtro="playa" class="boton-filtro">Playas</button>
+                <button data-filtro="montaña" class="boton-filtro">Montañas</button>
+                <button data-filtro="ciudad" class="boton-filtro">Ciudades</button>
+            </div>
+
+            <div id="lista-destinos" class="cuadricula-destinos">
+                </div>
+
+            <div id="detalle-destino" class="tarjeta-detalle-destino" style="display: none;">
+                <h3></h3>
+                <p></p>
+            </div>
+        </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Turismo El Salvador</p>
+  </footer>
+
+  <!-- Modal de Información del Destino -->
+  <div id="modalDestino" class="modal">
+    <div class="modal-contenido">
+      <span id="cerrarModal" class="cerrar">&times;</span>
+      <div id="infoDestinoModal"></div>
+    </div>
+  </div>
+
+  <script src="js/destino.js"></script>
+</body>
+</html>
