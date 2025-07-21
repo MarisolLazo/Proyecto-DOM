@@ -1,5 +1,3 @@
-# Proyecto-DOM
-Pagina de turismo
 📌 Distribución del Proyecto – Página de Turismo 🌍.
 
 🎯 Objetivo
