@@ -1,0 +1,287 @@
+/* Variables de colores más bonitos */
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #7b68ee;
+  --success-color: #52c41a;
+  --info-color: #1890ff;
+  --warning-color: #faad14;
+  --danger-color: #ff4d4f;
+  --light-bg: #f8fafc;
+  --dark-text: #2c3e50;
+  --muted-text: #6c757d;
+  --border-color: #e2e8f0;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  min-height: 100vh;
+  color: var(--dark-text);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.9), rgba(123, 104, 238, 0.9)),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="mountains" x="0" y="0" width="200" height="100" patternUnits="userSpaceOnUse"><polygon points="0,100 50,20 100,60 150,10 200,100" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="1200" height="600" fill="url(%23mountains)"/></svg>');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+  margin-bottom: 0;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+  border-bottom: none;
+  padding: 20px 24px;
+  font-weight: 600;
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.bg-info-gradient {
+  background: linear-gradient(135deg, var(--info-color), #40a9ff);
+}
+
+.bg-success-gradient {
+  background: linear-gradient(135deg, var(--success-color), #73d13d);
+}
+
+.card-body {
+  padding: 24px;
+}
+
+/* Form Styling */
+.section-title {
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.custom-input {
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.custom-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+  background-color: #fff;
+}
+
+.custom-input:hover {
+  border-color: #cbd5e0;
+}
+
+/* Tour Options */
+.tour-option {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.tour-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.tour-card {
+  background: #fff;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+}
+
+.tour-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.tour-option input[type="radio"]:checked + label .tour-card {
+  border-color: var(--primary-color);
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(123, 104, 238, 0.1));
+  color: var(--primary-color);
+}
+
+.tour-card i {
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.tour-card h6 {
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+/* Custom Checkbox */
+.custom-checkbox .form-check-input {
+  border-radius: 6px;
+  border: 2px solid var(--border-color);
+  width: 18px;
+  height: 18px;
+}
+
+.custom-checkbox .form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Custom Button */
+.custom-btn {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border: none;
+  border-radius: 12px;
+  padding: 14px 28px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-transform: none;
+}
+
+.custom-btn:hover {
+  background: linear-gradient(135deg, #357abd, #6a5acd);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+}
+
+/* Info Card */
+.info-card .card-body {
+  padding: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.info-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.info-item i {
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+.info-item strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--dark-text);
+}
+
+/* Price Items */
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.price-item:last-child {
+  border-bottom: none;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  margin: 0 8px;
+  padding: 8px 16px !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(74, 144, 226, 0.1);
+  color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-link.active {
+  background-color: var(--primary-color);
+  color: white !important;
+}
+
+/* Form Labels */
+.form-label {
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 40px 0;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .tour-card {
+    padding: 16px;
+  }
+
+  .custom-btn {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+}
+
+/* Smooth transitions */
+* {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus states for accessibility */
+.custom-input:focus,
+.custom-btn:focus,
+.form-check-input:focus {
+  outline: none;
+}
+
+/* Placeholder styling */
+.custom-input::placeholder {
+  color: var(--muted-text);
+  opacity: 0.7;
+}
+
+/* Select arrow styling */
+.form-select.custom-input {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 6 7 7 7-7'/%3e%3c/svg%3e");
+}

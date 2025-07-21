@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservations</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./reservations.css" />
+  </head>
+  <body>
+    <!-- <header>
+      <h1 id="bienvenida">¡Bienvenido a Turismo en El Salvador!</h1>
+      <nav class="navbar">
+        <ul>
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="../../destinos.html">Destinos</a></li>
+          <li><a href="./reservations.html">Reservas</a></li>
+          <li><a href="opiniones.html">Opiniones</a></li>
+          <li><a href="cultura.html">Cultura y Gastronomía</a></li>
+        </ul>
+      </nav>
+    </header> -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="#">
+          <i class="fas fa-mountain me-2"></i>Descubre El Salvador
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../destinos.html">Destinos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./reservations.html">Reservas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="opiniones.html">Opiniones</a> 
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cultura.html">Cultura</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8 mx-auto text-center">
+            <h1 class="display-4 text-white mb-4">¡Reserva tu Aventura!</h1>
+            <p class="lead text-white mb-0">
+              Completa el formulario y vive una experiencia inolvidable en El
+              Salvador
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+      <div class="row">
+        <!-- Formulario -->
+        <div class="col-lg-8">
+          <div class="card shadow-lg border-0">
+            <div class="card-header bg-gradient text-white">
+              <h3 class="mb-0">
+                <i class="fas fa-edit me-2"></i>Formulario de Reserva
+              </h3>
+            </div>
+            <div class="card-body p-4">
+              <form id="reservaForm">
+                <!-- Información Personal -->
+                <div class="section-title">
+                  <h5 class="text-primary mb-3">
+                    <i class="fas fa-user me-2"></i>Información Personal
+                  </h5>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="nombre" class="form-label"
+                      >Nombre Completo *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control custom-input"
+                      id="nombre"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label"
+                      >Correo Electrónico *</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control custom-input"
+                      id="email"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <label for="telefono" class="form-label">Teléfono *</label>
+                    <input
+                      type="tel"
+                      class="form-control custom-input"
+                      id="telefono"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <label for="fecha" class="form-label"
+                      >Fecha de Viaje *</label
+                    >
+                    <input
+                      type="date"
+                      class="form-control custom-input"
+                      id="fecha"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Detalles del Viaje -->
+                <div class="section-title">
+                  <h5 class="text-primary mb-3">
+                    <i class="fas fa-map-marked-alt me-2"></i>Detalles del Viaje
+                  </h5>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="destino" class="form-label">Destino *</label>
+                    <select
+                      class="form-select custom-input"
+                      id="destino"
+                      required
+                    >
+                      <option value="">Selecciona un destino</option>
+                      <option value="volcan-izalco">🌋 Volcán de Izalco</option>
+                      <option value="ruta-flores">🌸 Ruta de las Flores</option>
+                      <option value="lago-coatepeque">
+                        🏞️ Lago de Coatepeque
+                      </option>
+                      <option value="joya-ceren">🏛️ Joya de Cerén</option>
+                      <option value="playa-tunco">🏄‍♂️ Playa El Tunco</option>
+                      <option value="suchitoto">🏘️ Suchitoto</option>
+                      <option value="tazumal">⛩️ Tazumal</option>
+                      <option value="cerro-verde">🌲 Cerro Verde</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="personas" class="form-label"
+                      >Número de Personas *</label
+                    >
+                    <select
+                      class="form-select custom-input"
+                      id="personas"
+                      required
+                    >
+                      <option value="">Selecciona cantidad</option>
+                      <option value="1">1 persona</option>
+                      <option value="2">2 personas</option>
+                      <option value="3">3 personas</option>
+                      <option value="4">4 personas</option>
+                      <option value="5">5 personas</option>
+                      <option value="6+">6 o más personas</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label">Tipo de Tour *</label>
+                  <div class="row mt-2">
+                    <div class="col-md-4">
+                      <div class="tour-option">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="tipoTour"
+                          id="aventura"
+                          value="aventura"
+                          required
+                        />
+                        <label class="form-check-label w-100" for="aventura">
+                          <div class="tour-card">
+                            <i class="fas fa-hiking fa-2x mb-2"></i>
+                            <h6>Aventura</h6>
+                            <small class="text-muted"
+                              >Senderismo y deportes</small
+                            >
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="tour-option">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="tipoTour"
+                          id="cultural"
+                          value="cultural"
+                          required
+                        />
+                        <label class="form-check-label w-100" for="cultural">
+                          <div class="tour-card">
+                            <i class="fas fa-landmark fa-2x mb-2"></i>
+                            <h6>Cultural</h6>
+                            <small class="text-muted"
+                              >Historia y tradiciones</small
+                            >
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="tour-option">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="tipoTour"
+                          id="relajante"
+                          value="relajante"
+                          required
+                        />
+                        <label class="form-check-label w-100" for="relajante">
+                          <div class="tour-card">
+                            <i class="fas fa-spa fa-2x mb-2"></i>
+                            <h6>Relajante</h6>
+                            <small class="text-muted"
+                              >Descanso y naturaleza</small
+                            >
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Información Adicional -->
+                <div class="section-title">
+                  <h5 class="text-primary mb-3">
+                    <i class="fas fa-comment-dots me-2"></i>Información
+                    Adicional
+                  </h5>
+                </div>
+
+                <div class="mb-4">
+                  <label for="comentarios" class="form-label"
+                    >Comentarios o Solicitudes Especiales</label
+                  >
+                  <textarea
+                    class="form-control custom-input"
+                    id="comentarios"
+                    rows="3"
+                    placeholder="Cuéntanos sobre preferencias especiales, alergias, o cualquier información adicional..."
+                  ></textarea>
+                </div>
+
+                <div class="mb-4">
+                  <div class="form-check custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="terminos"
+                      required
+                    />
+                    <label class="form-check-label" for="terminos">
+                      Acepto los
+                      <a href="#" class="text-decoration-none"
+                        >términos y condiciones</a
+                      >
+                      y la
+                      <a href="#" class="text-decoration-none"
+                        >política de privacidad</a
+                      >
+                      *
+                    </label>
+                  </div>
+                </div>
+
+                <div class="d-grid">
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-lg custom-btn"
+                  >
+                    <i class="fas fa-paper-plane me-2"></i>Realizar Reserva
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Información Importante -->
+        <div class="col-lg-4">
+          <div class="card shadow-lg border-0 info-card">
+            <div class="card-header bg-info-gradient text-white">
+              <h5 class="mb-0">
+                <i class="fas fa-info-circle me-2"></i>Información Importante
+              </h5>
+            </div>
+            <div class="card-body">
+              <div class="info-item">
+                <i class="fas fa-check-circle text-success me-3"></i>
+                <div>
+                  <strong>Confirmación Inmediata</strong>
+                  <p class="mb-0 text-muted small">
+                    Recibirás confirmación por email
+                  </p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <i class="fas fa-user-tie text-primary me-3"></i>
+                <div>
+                  <strong>Guías Certificados</strong>
+                  <p class="mb-0 text-muted small">
+                    Profesionales con experiencia local
+                  </p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <i class="fas fa-bus text-warning me-3"></i>
+                <div>
+                  <strong>Transporte Incluido</strong>
+                  <p class="mb-0 text-muted small">Recogida desde tu hotel</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <i class="fas fa-shield-alt text-info me-3"></i>
+                <div>
+                  <strong>Seguro de Viaje</strong>
+                  <p class="mb-0 text-muted small">
+                    Cobertura completa incluida
+                  </p>
+                </div>
+              </div>
+
+              <div class="info-item border-0">
+                <i class="fas fa-phone text-success me-3"></i>
+                <div>
+                  <strong>Soporte 24/7</strong>
+                  <p class="mb-0 text-muted small">
+                    Asistencia durante tu viaje
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Precios Estimados -->
+          <div class="card shadow-lg border-0 mt-4">
+            <div class="card-header bg-success-gradient text-white">
+              <h6 class="mb-0">
+                <i class="fas fa-dollar-sign me-2"></i>Precios Estimados
+              </h6>
+            </div>
+            <div class="card-body">
+              <div class="price-item">
+                <span>Tours de 1 día</span>
+                <span class="fw-bold">$25 - $50</span>
+              </div>
+              <div class="price-item">
+                <span>Tours de aventura</span>
+                <span class="fw-bold">$40 - $80</span>
+              </div>
+              <div class="price-item border-0">
+                <span>Tours culturales</span>
+                <span class="fw-bold">$20 - $45</span>
+              </div>
+              <small class="text-muted">*Precios por persona en USD</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Turismo El Salvador</p>
+    </footer>
+
+    <script src="./reservations.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
