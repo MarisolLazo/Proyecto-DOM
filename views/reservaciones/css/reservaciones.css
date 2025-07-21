@@ -14,14 +14,109 @@
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Fondo solo visible al inicio */
+body.fondo-inicial {
+     /*background-image: url('../../../img/fondo.jpeg');
+    Ruta a tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background 1s ease;
+}
+
+/* Fondo normal después de eliminar la clase */
+body {
+    background-color: #f0f8ff;
+}
+
+/* Encabezado */
+header {
+    background: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 1em 0 !important;
+}
+
+/* Footer adaptable: siempre abajo salvo en la primera página */
+footer {
+    background: #0077b6;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 40px;
+    position: relative;
+    bottom: 0;
+}
+
+/* Estructura para mantener el footer abajo excepto en la primera página */
+body:not(.pagina-inicio) {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main adaptable: ocupa el espacio restante */
+body:not(.pagina-inicio) main {
+    flex: 1;
+}
+
+.navbar-moded {
+    background-color: #00b4d8;
+    padding: 0.5em 0;
+}
+
+.navbar-moded ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    /* Para evitar margen de ul por defecto */
+    padding: 0;
+    /* Por si acaso */
+    height: 18px;
+    align-items: center;
+    
+}
+
+.navbar-moded li a {
+    font-family: "Times New Roman", Times, serif !important;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+
+}
+
+.navbar-moded li a:hover {
+    color: #000000;
+}
+
+.bienvenida {
+    font-family: "Times New Roman", Times, serif !important;
+    font-size: 32px;
+    margin: 0 !important;
+    font-weight: bold;
+}
+
+
 body {
   font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
-  min-height: 100vh;
-  color: var(--dark-text);
+  /* min-height: 100vh;
+  color: var(--dark-text); */
 }
 
-/* Hero Section */
+/* Hero Section 
 .hero-section {
   background: linear-gradient(135deg, rgba(74, 144, 226, 0.9), rgba(123, 104, 238, 0.9)),
     url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="mountains" x="0" y="0" width="200" height="100" patternUnits="userSpaceOnUse"><polygon points="0,100 50,20 100,60 150,10 200,100" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="1200" height="600" fill="url(%23mountains)"/></svg>');
@@ -29,7 +124,7 @@ body {
   background-position: center;
   padding: 60px 0;
   margin-bottom: 0;
-}
+}*/
 
 /* Cards */
 .card {
@@ -241,26 +336,6 @@ body {
   font-weight: 600;
   color: var(--dark-text);
   margin-bottom: 8px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 40px 0;
-  }
-
-  .card-body {
-    padding: 20px;
-  }
-
-  .tour-card {
-    padding: 16px;
-  }
-
-  .custom-btn {
-    padding: 12px 24px;
-    font-size: 15px;
-  }
 }
 
 /* Smooth transitions */
