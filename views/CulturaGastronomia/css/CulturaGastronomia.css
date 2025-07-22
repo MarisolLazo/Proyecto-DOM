@@ -8,7 +8,8 @@
 
 /* Fondo solo visible al inicio */
 body.fondo-inicial {
-    background-image: url('../../../img/fondo.jpeg');
+  background-image: url('../../../assets/img/fondo.jpeg'); /* Ruta a tu imagen */
+
     /* Ruta a tu imagen */
     background-size: cover;
     background-position: center;

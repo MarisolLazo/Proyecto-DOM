@@ -19,27 +19,27 @@ const destinosInfo = {
   "Suchitoto": {
     descripcion: "Un hermoso pueblo colonial lleno de historia y cultura.",
     direccion: "Suchitoto, Cuscatlán, El Salvador",
-    imagen: "img/suchitoto.jpeg"
+    imagen: "./assets/img/suchitoto.jpeg"
   },
   "Playa El Tunco": {
     descripcion: "Destino favorito de surfistas y turistas por su belleza y vida nocturna.",
     direccion: "La Libertad, El Salvador",
-    imagen: "img/el tunco.jpg"
+    imagen: "./assets/img/el tunco.jpg"
   },
   "Volcán de Izalco": {
     descripcion: "Uno de los volcanes más icónicos de El Salvador.",
     direccion: "Parque Nacional Cerro Verde, Sonsonate El Salvador",
-    imagen: "img/volcan de izalco.jpeg"
+    imagen: "./assets/img/volcan de izalco.jpeg"
   },
   "Lago de Coatepeque": {
     descripcion: "Un lago de origen volcánico famoso por sus aguas cristalinas y vistas panorámicas.",
     direccion: "Lago de Coatepeque, Santa Ana, El Salvador",
-    imagen: "img/lago de coatepeque.jpeg"
+    imagen: "./assets/img/lago de coatepeque.jpeg"
   },
   "Las pilas": {
     descripcion: "Un paraje natural con pozas de agua cristalina rodeadas de vegetación.",
     direccion: "Las Pilas, Arambala, Morazán, El Salvador",
-    imagen: "img/las pilas arambala.jpeg"
+    imagen: "./assets/img/las pilas arambala.jpeg"
   }
 };
 
@@ -57,7 +57,7 @@ btnApretable.addEventListener('click', () => {
   console.log(`🟢 El usuario se llama: ${nombre}`); // Esta línea muestra el nombre en consola
 
   // Remover fondo inicial
-  document.body.classList.remove('fondo-inicial');
+     document.body.classList.remove('fondo-inicial');
 
   // Cambiar saludo
   elementoDOM.style.color = "darkgreen";
