@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opiniones - Turismo El Salvador</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/opiniones.css">
+</head>
+<body>
+<header>
+    <h1 id="bienvenida">¡Bienvenido a Turismo en El Salvador!</h1>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="./views/reservations/reservations.html">Reservas</a></li>
+            <li><a href="opiniones.html">Opiniones</a></li>
+            <li><a href="cultura.html">Cultura y Gastronomía</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main-opiniones">
+    <section class="seccion-opiniones">
+        <div class="contenedor-opiniones">
+            <h2>Comparte tu Experiencia</h2>
+            <p class="descripcion">¿Has visitado alguno de nuestros destinos? ¡Queremos conocer tu experiencia! Comparte tu opinión y ayuda a otros viajeros a descubrir las maravillas de El Salvador.</p>
+
+            <!-- Formulario para agregar opiniones -->
+            <div class="formulario-opinion">
+                <div class="entrada-usuario">
+                    <input type="text" id="nombre-usuario" placeholder="Tu nombre" maxlength="50">
+                    <select id="calificacion" aria-label="Calificación">
+                        <option value="">Selecciona calificación</option>
+                        <option value="5">⭐⭐⭐⭐⭐ Excelente</option>
+                        <option value="4">⭐⭐⭐⭐ Muy bueno</option>
+                        <option value="3">⭐⭐⭐ Bueno</option>
+                        <option value="2">⭐⭐ Regular</option>
+                        <option value="1">⭐ Necesita mejorar</option>
+                    </select>
+                </div>
+                <textarea
+                        id="texto-comentario"
+                        placeholder="Escribe aquí tu comentario sobre tu experiencia en El Salvador..."
+                        maxlength="500"
+                        rows="4"
+                ></textarea>
+                <div class="contador-caracteres">
+                    <span id="contador">0/500 caracteres</span>
+                </div>
+                <button id="btn-publicar" class="btn-publicar">
+                    <span class="icono-publicar">📝</span>
+                    Publicar Comentario
+                </button>
+            </div>
+
+            <!-- Estadísticas de comentarios -->
+            <div class="estadisticas">
+                <div class="contador-comentarios">
+                    <span class="numero-comentarios" id="total-comentarios">0</span>
+                    <span class="texto-comentarios">Comentarios</span>
+                </div>
+                <div class="calificacion-promedio">
+                    <span class="estrellas-promedio" id="estrellas-promedio">⭐⭐⭐⭐⭐</span>
+                    <span class="numero-promedio" id="numero-promedio">0.0</span>
+                </div>
+            </div>
+
+            <!-- Filtros de comentarios -->
+            <div class="filtros-comentarios">
+                <button class="filtro-btn activo" data-filtro="todos">Todos</button>
+                <button class="filtro-btn" data-filtro="5">⭐⭐⭐⭐⭐</button>
+                <button class="filtro-btn" data-filtro="4">⭐⭐⭐⭐</button>
+                <button class="filtro-btn" data-filtro="3">⭐⭐⭐</button>
+                <button class="filtro-btn" data-filtro="2">⭐⭐</button>
+                <button class="filtro-btn" data-filtro="1">⭐</button>
+            </div>
+
+            <!-- Lista de comentarios -->
+            <div class="lista-comentarios" id="lista-comentarios">
+                <!-- Los comentarios se agregarán dinámicamente aquí -->
+            </div>
+
+            <!-- Mensaje cuando no hay comentarios -->
+            <div class="sin-comentarios" id="sin-comentarios">
+                <div class="icono-vacio">💬</div>
+                <h3>¡Sé el primero en comentar!</h3>
+                <p>Comparte tu experiencia sobre los destinos turísticos de El Salvador.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Turismo El Salvador</p>
+</footer>
+
+<script src="js/opiniones.js"></script>
+</body>
+</html>
